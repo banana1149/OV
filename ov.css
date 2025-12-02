@@ -1,16 +1,11 @@
-/*
-  CSS for THE OV ADVISORY - ov.css
-  Theme: Luxurious High-Contrast Black, White, and Gold
-*/
-
 :root {
-    --background-dark: #000000; /* Deep Black */
-    --background-mid: #1a1a1a; /* Dark Grey for section breaks */
-    --text-light: #FFFFFF; /* Pure White for primary text */
-    --accent-gold: #FFD700; /* Standard Gold */
-    --accent-glow: #F0C000; /* Slightly darker gold for hover/accents */
+    --background-dark: #000000; 
+    --background-mid: #1a1a1a; 
+    --text-light: #FFFFFF; 
+    --accent-gold: #FFD700; 
+    --accent-glow: #F0C000; 
     --border-subtle: #333333;
-    --shadow-dark: rgba(255, 255, 255, 0.05); /* Subtle light shadow on dark elements */
+    --shadow-dark: rgba(255, 255, 255, 0.05); /
 }
 
 /* --- Global Styles --- */
