@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE OV ADVISORY - Strategic Legal Advisory</title>
+    <link rel="stylesheet" href="ov.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <h1>THE OV ADVISORY</h1>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Strategic Legal Advisory</h2>
+        <p>Since 2020: Providing innovative, practical, and client-focused legal services with a commitment to excellence, integrity, and responsiveness.</p>
+    </section>
+
+    <section id="history">
+        <h2>Our History & Vision</h2>
+        <p>The OV Advisory was founded in 2020 with a clear vision to provide innovative, practical, and client-focused legal services to individuals, businesses, and public sector institutions. The firm has grown steadily to distinguish itself in the provision of first-class legal services, offering legal guidance and support of the highest standard to a wide range of local and international clients.</p>
+        
+        <p id="initial-history">Our clients have come to value our ability to achieve successful outcomes in litigation cases; give expert and pragmatic advice; and provide conscientious and responsive service. We formulate legal strategies that will ensure the continued and effective flow of your daily business operations. Our commitment to excellence, integrity, and responsiveness has earned us a reputation for delivering results and building lasting relationships with our clients.</p>
+        
+        <div id="read-more-content">
+            <p>We have our offices in **Lagos** and **Abuja** and are working towards opening more branches in order to have a wide range of legal services coverage, all in a bid to shoulder the burden of our clients. We work wherever our clients need us. This is how we define ourselves, not by reference to where we have offices. Cross border work isn't just what we do; it is what we excel at.</p>
+        </div>
+        
+        <button id="read-more-btn" onclick="toggleReadMore()">Read More</button>
+    </section>
+    
+    <section id="services">
+        <h2>Practice Areas</h2>
+        <div>
+            
+            <div>
+                <h3>LEGAL COMPLIANCE AND REGULATORY SUPPORT</h3>
+                <p>Advising on regulatory compliance frameworks, corporate governance, and risk management.</p>
+                <ul>
+                    <li>Expertise in CBN, SEC, NDIC, and FCCPC regulatory matters.</li>
+                    <li>Data protection (NDPR/GDPR) and Anti-money laundering (AML/CFT).</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>CORPORATE LAW AND PRACTICE</h3>
+                <p>Handling company formation, structuring, and corporate secretarial services.</p>
+                <ul>
+                    <li>Mergers and acquisitions, shareholder relations governance documentation.</li>
+                    <li>Corporate due diligence, compliance, and corporate licensing requirements.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>COMMERCIAL PRACTICE AND LITIGATION</h3>
+                <p>Representing clients in complex commercial disputes.</p>
+                <ul>
+                    <li>Breach of contract, debt recovery, corporate and shareholder issues.</li>
+                    <li>Enforcement of arbitral awards, and real estate-related matters.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>CONTRACT NEGOTIATION AND COMMERCIAL TRANSACTIONS</h3>
+                <p>Drafting, reviewing, and negotiating a wide range of commercial agreements.</p>
+                <ul>
+                    <li>Supply, distribution, partnership contracts, service level agreements.</li>
+                    <li>Technology and fintech contracts, and real estate transactions for investment.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>CRIMINAL AND CIVIL LITIGATION</h3>
+                <p>Advising and representing clients in white-collar crime and rights-based litigation.</p>
+                <ul>
+                    <li>White-collar crime and regulatory enforcement proceedings.</li>
+                    <li>Emphasis on strategic defence and dispute resolution.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>REAL ESTATE AND PROPERTY LAW</h3>
+                <p>Advising on land acquisition, lease and tenancy arrangements, and property development.</p>
+                <ul>
+                    <li>Land acquisition, lease and tenancy arrangements.</li>
+                    <li>Property development and title perfection.</li>
+                    <li>Focus on regulatory and transactional compliance.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>ALTERNATIVE DISPUTE RESOLUTION (ADR)</h3>
+                <p>Actively engaged in arbitration and mediation.</p>
+                <ul>
+                    <li>Representation and advisory support in domestic and international ADR proceedings.</li>
+                    <li>Strategic resolution of complex disputes outside of court.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="clients">
+        <h2>Major Clients</h2>
+        <div>
+            <p>TURKISH AIRLINES</p>
+            <p>Pernod Ricard Nigeria</p>
+        </div>
+    </section>
+    
+    <section id="team">
+        <h2>Principal Officers</h2>
+        <div>
+            <div>
+                <img src="IMG-20251126-WA0014.jpg" alt="Samuel Abu, Esq. - Managing Partner Photo" width="150" height="150">
+                <h3>SAMUEL ABU, ESQ</h3>
+                <p>MANAGING PARTNER, LL. B, B.L</p>
+                <a href="Newlaw.html"><button>View Profile</button></a>
+            </div>
+            
+            <div>
+                <img src="jesudunsin_olusanya.jpg" alt="Jesudunsin Olusanya - Principal Partner Photo" width="150" height="150">
+                <h3>JESUDUNSIN OLUSANYA</h3>
+                <p>PRINCIPAL PARTNER, L.L.B, B.L</p>
+                <a href="jesudunsin.html"><button>View Profile</button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div>
+                <h3>CONTACT THE OV ADVISORY</h3>
+                <p>No. 48, Olatunbosun Street</p>
+                <p>Shonibare Estate, Maryland, Lagos, Nigeria</p>
+            </div>
+            <div>
+                <h3>GET IN TOUCH</h3>
+                <p>Tel: +234 807 420 6985 / +234 916 000 7517</p>
+                <a href="mailto:advisory@theovadvisory.com">Email: advisory@theovadvisory.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Function to toggle the visibility of the "read more" content in the History section.
+         */
+        function toggleReadMore() {
+            var content = document.getElementById('read-more-content');
+            var button = document.getElementById('read-more-btn');
+
+            if (content.style.display === 'none' || content.style.display === '') {
+                // Show the content
+                content.style.display = 'block';
+                button.textContent = 'Show Less';
+            } else {
+                // Hide the content
+                content.style.display = 'none';
+                button.textContent = 'Read More';
+            }
+        }
+        
+        // Hide the content by default using JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            var content = document.getElementById('read-more-content');
+            if (content) {
+                 content.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

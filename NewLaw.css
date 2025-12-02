@@ -1,0 +1,1040 @@
+
+:root {
+    --color-primary: #1a1a1a;        
+    --color-black: #000000;          
+    --color-white: #ffffff;          
+    --color-accent: #D4AF37;         
+    --color-text-muted: #cccccc;   
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    /* Spacing */
+    --section-padding: 80px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.2rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--color-text-muted);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 2. Layout & Utilities --- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: var(--section-padding) 0;
+}
+
+.bg-black {
+    background-color: var(--color-black);
+}
+
+.bg-dark-grey {
+    background-color: var(--color-primary);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.section-title p {
+    color: var(--color-text-muted);
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+/* --- 3. Buttons --- */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    border-color: var(--color-accent);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black);
+    border-color: var(--color-accent);
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+/* --- 4. Header & Navigation --- */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+#header.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 2px 15px rgba(212, 175, 55, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+
+.logo span {
+    color: var(--color-accent);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    padding: 5px 0;
+    position: relative;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-accent);
+}
+
+/* Underline effect */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+
+.header-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1.2;
+}
+
+/* Style for the Phone number in the Header */
+.header-contact i {
+    color: var(--color-accent); /* Phone logo in header */
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.header-contact span {
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    text-transform: uppercase;
+}
+
+.header-phone {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-accent);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- 5. Sticky Actions (Emergency Contact) --- */
+/* NOTE: The primary action-btn (gold) is typically the Phone/Call icon. */
+.sticky-actions {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-btn {
+    background-color: var(--color-accent);
+    color: var(--color-black); /* Icon color (e.g., fa-solid fa-phone-alt) */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.action-btn:hover {
+    background-color: var(--color-white);
+}
+
+.action-btn .tooltip {
+    visibility: hidden;
+    width: 100px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+}
+
+.action-btn:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* --- START: WHATSAPP LOGO STYLING --- */
+.action-btn.whatsapp {
+    background-color: #25d366; /* WhatsApp Green */
+    color: var(--color-white); /* WhatsApp Icon color (e.g., fa-brands fa-whatsapp) */
+}
+.action-btn.whatsapp:hover {
+    background-color: #128c7e;
+}
+/* --- END: WHATSAPP LOGO STYLING --- */
+
+/* --- 6. Hero Section --- */
+
+.hero {
+    padding-top: 150px; /* Space for fixed header */
+    padding-bottom: var(--section-padding);
+    background-color: var(--color-black);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h4 {
+    color: var(--color-accent);
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--color-white);
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--color-text-muted);
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-width: 300px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 4/5;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.5s ease;
+}
+
+.hero-image img:hover {
+    filter: grayscale(50%);
+}
+
+/* --- 7. Stats Section (Counter) --- */
+
+.stats-section {
+    background-color: var(--color-primary);
+    padding: 40px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+    font-family: var(--font-body);
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: var(--color-white);
+    font-weight: 300;
+    margin: 0;
+}
+
+
+/* --- 8. About Section --- */
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    min-width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1.5;
+}
+
+.about-text h4 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+.about-text h2 {
+    color: var(--color-white);
+    margin-bottom: 25px;
+}
+
+.about-text p:last-of-type {
+    margin-bottom: 30px;
+}
+
+.signature {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-style: italic;
+    color: var(--color-accent);
+    margin-top: 20px;
+}
+
+/* --- 9. Practice Areas --- */
+
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.practice-card {
+    background-color: var(--color-black);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 3px solid var(--color-accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1);
+}
+
+.icon-box {
+    color: var(--color-accent);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.practice-card h3 {
+    color: var(--color-white);
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.practice-card p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.practice-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.practice-link i {
+    margin-left: 8px;
+    font-size: 0.8rem;
+}
+
+/* --- 10. Features (Why Choose Us) --- */
+
+.features-section {
+    background-color: var(--color-black);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-box {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.feature-box h3 {
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    font-family: var(--font-heading);
+}
+
+/* --- 11. Case Results --- */
+
+.results-section {
+    background-color: var(--color-primary);
+}
+
+.case-study {
+    background-color: var(--color-black);
+    padding: 25px;
+    border-radius: 8px;
+    border-bottom: 4px solid var(--color-accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.case-type {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.case-result {
+    color: #4CAF50; /* Green for success */
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
+.case-study h4 {
+    color: var(--color-white);
+    margin-bottom: 10px;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+.case-study p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* --- 12. Contact Section & Form --- */
+
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    color: var(--color-accent);
+    margin-bottom: 30px;
+    font-family: var(--font-heading);
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* Style for Email, Phone, and Location logos in the main contact section (e.g., fa-solid fa-envelope) */
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--color-accent); 
+    padding-top: 5px;
+}
+
+.info-content h5 {
+    color: var(--color-white);
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.info-content p {
+    color: var(--color-text-muted);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.contact-form-box {
+    flex: 1.2;
+    background-color: var(--color-primary);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form-box h3 {
+    color: var(--color-white);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: var(--color-white);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+}
+
+/* Floating Label Effect */
+.form-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-70%);
+    color: var(--color-text-muted);
+    pointer-events: none;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+    top: 0;
+    left: 8px;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+    padding: 0 5px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    padding-top: 20px;
+}
+
+textarea.form-control:focus + .form-label,
+textarea.form-control:not(:placeholder-shown) + .form-label {
+    top: -10px;
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-top: 20px; /* Ensure space for the label */
+}
+
+/* Hide the label for the selected option in the select box */
+select.form-control option[disabled] {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+select.form-control:focus + .form-label,
+select.form-control:not([value=""]) + .form-label {
+    top: 0;
+    left: 8px;
+    font-size: 0.75rem;
+    color: var(--color-accent);
+    background-color: var(--color-primary);
+    padding: 0 5px;
+}
+
+/* --- 13. Footer --- */
+
+footer {
+    background-color: #0d0d0d;
+    padding: 60px 0 30px;
+    border-top: 2px solid var(--color-accent);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: var(--color-white);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.footer-logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-white);
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--color-accent);
+}
+
+.footer-col p {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-links li i {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright p {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+/* --- 14. Modal Styling --- */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden by default, shown by JS */
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay[style*="display: flex"] {
+    opacity: 1;
+}
+
+.modal {
+    background-color: var(--color-primary);
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    border-top: 4px solid var(--color-accent);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.modal i {
+    font-size: 3rem;
+    color: #4CAF50; /* Success green */
+    margin-bottom: 20px;
+}
+
+.modal h3 {
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+
+.modal p {
+    color: var(--color-text-muted);
+}
+
+
+/* --- 15. Media Queries for Responsiveness --- */
+
+@media (max-width: 1024px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    
+    .navbar {
+        height: 70px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+    }
+
+    .header-contact {
+        display: none;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        max-width: 100%;
+    }
+
+    .about-text {
+        order: 1;
+    }
+
+    .about-image {
+        order: 2;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .contact-info {
+        min-width: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Menu Override */
+    .nav-menu {
+        position: fixed;
+        left: -100%; /* Hidden off-screen */
+        top: 70px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.98);
+        width: 100%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        z-index: 99;
+        padding: 30px 0;
+        height: calc(100vh - 70px);
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Slide in */
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.1);
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 15px 0;
+        width: 80%;
+    }
+
+    .nav-link::after {
+        height: 1px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero adjustments */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image-wrapper {
+        order: 1;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .hero {
+        padding-top: 90px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* General Layout */
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-col {
+        text-align: center;
+    }
+    
+    .footer-links {
+        padding-left: 0;
+    }
+    
+    .footer-links li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-links li i {
+        display: none; /* Hide icons in mobile footer links for cleaner look */
+    }
+    
+    .sticky-actions {
+        flex-direction: row;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 10px;
+    }
+    
+    .action-btn .tooltip {
+        display: none; /* Hide tooltips on small screens */
+    }
+}
