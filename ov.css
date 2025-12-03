@@ -8,9 +8,9 @@
     --shadow-dark: rgba(255, 255, 255, 0.05); /
 }
 
-/* --- Global Styles --- */
+
 body {
-    font-family: 'Times New Roman', Times, serif; /* Elegant, classic font */
+    font-family: 'Times New Roman', Times, serif; 
     margin: 0;
     padding: 0;
     line-height: 1.7;
@@ -37,7 +37,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Typography (Headings) --- */
 h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -58,7 +57,7 @@ h2::after {
     width: 60px;
     height: 3px;
     background: var(--accent-gold);
-    box-shadow: 0 0 8px var(--accent-gold); /* Adding a subtle glow */
+    box-shadow: 0 0 8px var(--accent-gold); 
     margin: 10px auto 0;
 }
 
@@ -68,7 +67,7 @@ h3 {
     font-weight: normal;
 }
 
-/* --- Header/Navigation --- */
+
 header {
     background-color: var(--background-dark);
     border-bottom: 1px solid var(--border-subtle);
@@ -82,11 +81,11 @@ header h1 {
     letter-spacing: 4px;
 }
 
-/* --- Hero Section --- */
+
 #hero {
     text-align: center;
     padding: 80px 0;
-    background: url('https://via.placeholder.com/1200x500/000000/F0C000?text=THE+OV+ADVISORY') no-repeat center center/cover;
+    background: black no-repeat center center/cover;
     border-bottom: 3px double var(--accent-gold);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }
@@ -94,7 +93,7 @@ header h1 {
 #hero h2 {
     font-size: 3.5em;
     color: var(--accent-gold);
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Stronger glow on title */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.7); 
     margin-bottom: 10px;
     border: none;
 }
@@ -109,13 +108,13 @@ header h1 {
     color: var(--text-light);
 }
 
-/* --- Main Content Sections --- */
+/* Main Content Sections */
 section {
     padding: 50px 0;
     background-color: var(--background-dark);
 }
 
-/* --- History Section --- */
+/* History Section */
 #history {
     background-color: var(--background-mid);
     border-bottom: 1px solid var(--border-subtle);
@@ -147,7 +146,7 @@ section {
     box-shadow: 0 0 10px var(--accent-gold);
 }
 
-/* --- Practice Areas (Services) Section --- */
+/* Practice Areas Section */
 #services > div {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -196,7 +195,7 @@ section {
     font-size: 1.2em;
 }
 
-/* --- Clients Section --- */
+/* Clients Section */
 #clients {
     text-align: center;
     padding: 30px 0;
@@ -287,7 +286,7 @@ section {
 }
 
 
-/* --- Footer/Contact Section --- */
+/* Footer/Contact Section */
 footer {
     background-color: var(--background-mid);
     color: var(--text-light);
@@ -314,7 +313,7 @@ footer p, footer a {
     margin: 5px 0;
 }
 
-/* --- Responsiveness --- */
+/*Responsiveness */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
